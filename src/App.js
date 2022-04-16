@@ -8,7 +8,7 @@ import Users from './pages/Users/Users';
 
 function App() {
   return (
-    <div className='container'>
+    <div>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<p className='text-center h1 bg-dark text-white py-5'>Assalamualaikum</p>}/>

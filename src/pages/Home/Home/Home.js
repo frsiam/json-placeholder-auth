@@ -1,9 +1,16 @@
-import React from 'react';
+import useUsers from '../../Hooks/useUsers';
+import SingleUser from '../../SingleUser/SingleUser';
 
 const Home = () => {
+    const userData = useUsers('https://jsonplaceholder.typicode.com/users')
+    if(userData.length){
+        userData.length = 4;
+    }
     return (
         <div>
-            <h2 lassName='text-center h1 bg-dark text-white py-5'>From Home</h2>
+            {
+                userData.map(user => <SingleUser user={user}/>)
+            }
         </div>
     );
 };
