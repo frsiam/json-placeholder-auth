@@ -7,7 +7,7 @@ const UserDetails = () => {
     const { userId } = useParams()
     const userDetails = useUsers(`https://jsonplaceholder.typicode.com/users?id=${userId}`)
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto mt-5'>
             <div className='d-flex justify-content-center'>
                 <SingleUser user={userDetails[0]}>
                     {
